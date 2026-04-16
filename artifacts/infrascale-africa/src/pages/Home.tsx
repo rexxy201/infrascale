@@ -41,7 +41,7 @@ function ParallaxImage({ src, alt, speed = 0.5 }: { src: string, alt: string, sp
 
 const navLinks = [
   { href: "#thesis", label: "The Thesis" },
-  { href: "#divisions", label: "Divisions" },
+  { href: "#divisions", label: "Services" },
   { href: "#scale", label: "Scale" },
   { href: "#projects", label: "Projects" },
 ];
@@ -158,12 +158,12 @@ export default function Home() {
             </motion.h1>
             
             <motion.p variants={fadeUp} className="text-xl md:text-2xl text-white/70 max-w-2xl mb-12 font-light leading-relaxed">
-              We are the kinetic force turning ambitious blueprints into real-world scale across digital, energy, and connectivity infrastructure.
+              Construction, installation, and maintenance of telecommunications and IT infrastructure — delivered at continental scale across Africa.
             </motion.p>
             
             <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-6">
               <a href="#divisions" className="group flex items-center justify-between px-10 py-5 bg-primary text-white font-bold uppercase tracking-[0.15em] text-sm hover:bg-white hover:text-background transition-all duration-500">
-                <span>Explore Our Assets</span>
+                <span>Our Services</span>
                 <ArrowRight className="w-5 h-5 ml-6 group-hover:translate-x-2 transition-transform" />
               </a>
             </motion.div>
@@ -199,7 +199,7 @@ export default function Home() {
             className="max-w-5xl mx-auto text-center"
           >
             <motion.h2 variants={fadeUp} className="text-3xl md:text-5xl lg:text-6xl font-serif text-white leading-[1.1] mb-12">
-              This is not just about building assets. It's about engineering the <span className="text-primary italic">nervous system</span> of the world's fastest-growing continent.
+              We don't just connect networks. We build the <span className="text-primary italic">physical foundation</span> that Africa's digital economy runs on.
             </motion.h2>
             <motion.div variants={fadeUp} className="w-24 h-1 bg-accent mx-auto mb-20"></motion.div>
             
@@ -209,24 +209,24 @@ export default function Home() {
                 <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center mb-6 text-primary">
                   <HardHat className="w-5 h-5" />
                 </div>
-                <h3 className="text-xl font-serif text-white mb-4">Unapologetic Scale</h3>
-                <p className="text-white/60 leading-relaxed font-light">We don't do incremental. We build infrastructure that alters the economic gravity of entire regions, serving enterprise, telcos, and sovereign governments with massive capacity.</p>
+                <h3 className="text-xl font-serif text-white mb-4">Build & Maintain</h3>
+                <p className="text-white/60 leading-relaxed font-light">From the first survey to long-term maintenance contracts, we own the full lifecycle of telecommunications and IT network infrastructure across the continent.</p>
               </motion.div>
               <motion.div variants={fadeUp} className="relative">
                 <div className="absolute -left-6 top-0 text-8xl font-serif text-white/5 pointer-events-none select-none -z-10 -translate-y-6">02</div>
                 <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center mb-6 text-accent">
                   <TrendingUp className="w-5 h-5" />
                 </div>
-                <h3 className="text-xl font-serif text-white mb-4">Kinetic Execution</h3>
-                <p className="text-white/60 leading-relaxed font-light">Ideas are cheap. Steel in the ground and fiber in the dirt is hard. We bridge the gap between continental ambition and ruthless, pragmatic execution.</p>
+                <h3 className="text-xl font-serif text-white mb-4">Deploy at Scale</h3>
+                <p className="text-white/60 leading-relaxed font-light">General contracting and end-to-end system deployment — we translate complex technical blueprints into operational infrastructure, on time and on spec.</p>
               </motion.div>
               <motion.div variants={fadeUp} className="relative">
                 <div className="absolute -left-6 top-0 text-8xl font-serif text-white/5 pointer-events-none select-none -z-10 -translate-y-6">03</div>
                 <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center mb-6 text-secondary">
                   <Shield className="w-5 h-5" />
                 </div>
-                <h3 className="text-xl font-serif text-white mb-4">Deep Roots</h3>
-                <p className="text-white/60 leading-relaxed font-light">Born in Africa, built for the world. We understand the complex interplay of regulation, terrain, and capital required to succeed where others falter.</p>
+                <h3 className="text-xl font-serif text-white mb-4">Supply & Trade</h3>
+                <p className="text-white/60 leading-relaxed font-light">Procurement and supply of IT and telecommunications equipment, backed by established import and export capabilities that keep projects moving without delays.</p>
               </motion.div>
             </motion.div>
           </motion.div>
@@ -238,11 +238,11 @@ export default function Home() {
         <div className="container mx-auto px-6 md:px-12">
           <div className="flex items-center gap-4 mb-20">
             <div className="w-12 h-[2px] bg-primary"></div>
-            <h2 className="text-sm font-sans font-bold uppercase tracking-[0.2em] text-white">Infrastructure Divisions</h2>
+            <h2 className="text-sm font-sans font-bold uppercase tracking-[0.2em] text-white">Our Services</h2>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Energy */}
+            {/* Telecom & IT Infrastructure */}
             <motion.div 
               initial="hidden"
               whileInView="visible"
@@ -251,28 +251,28 @@ export default function Home() {
               className="group relative h-[700px] overflow-hidden bg-background"
             >
               <div className="absolute inset-0">
-                <ParallaxImage src="/images/energy.png" alt="Energy Infrastructure" />
+                <ParallaxImage src="/images/connectivity.png" alt="Telecommunications Infrastructure" />
               </div>
               <div className="absolute inset-0 bg-background/50 group-hover:bg-background/30 transition-colors duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
               
               <div className="absolute inset-0 p-8 md:p-12 flex flex-col justify-end">
                 <div className="w-16 h-16 rounded-sm bg-white/5 backdrop-blur-md border border-white/10 flex items-center justify-center mb-8 text-accent">
-                  <Zap className="w-8 h-8" />
+                  <Signal className="w-8 h-8" />
                 </div>
-                <h3 className="text-4xl font-serif text-white mb-4">Energy</h3>
+                <h3 className="text-4xl font-serif text-white mb-4">Telecom & IT</h3>
                 <p className="text-white/70 mb-8 max-w-sm transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 font-light leading-relaxed">
-                  Utility-scale solar arrays, decentralized grids, and power storage systems designed to fuel heavy industry and rising metropolises. Reliable baseload for a continent in motion.
+                  Construction, installation, and ongoing maintenance of telecommunications systems and information technology networks. We build the physical backbone that keeps Africa connected.
                 </p>
                 <div className="w-full h-[1px] bg-white/20 mb-6 group-hover:bg-accent/50 transition-colors"></div>
                 <div className="flex items-center text-white/50 group-hover:text-accent font-bold uppercase tracking-[0.2em] text-xs transition-colors">
-                  <span>Explore Assets</span>
+                  <span>Learn More</span>
                   <ChevronRight className="w-4 h-4 ml-2" />
                 </div>
               </div>
             </motion.div>
 
-            {/* Digital */}
+            {/* Contracting & Deployment */}
             <motion.div 
               initial="hidden"
               whileInView="visible"
@@ -281,28 +281,28 @@ export default function Home() {
               className="group relative h-[700px] overflow-hidden bg-background mt-0 lg:mt-16"
             >
               <div className="absolute inset-0">
-                <ParallaxImage src="/images/digital.png" alt="Digital Infrastructure" />
+                <ParallaxImage src="/images/digital.png" alt="Contracting and System Deployment" />
               </div>
               <div className="absolute inset-0 bg-background/50 group-hover:bg-background/30 transition-colors duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
               
               <div className="absolute inset-0 p-8 md:p-12 flex flex-col justify-end">
                 <div className="w-16 h-16 rounded-sm bg-white/5 backdrop-blur-md border border-white/10 flex items-center justify-center mb-8 text-primary">
-                  <Cpu className="w-8 h-8" />
+                  <HardHat className="w-8 h-8" />
                 </div>
-                <h3 className="text-4xl font-serif text-white mb-4">Digital</h3>
+                <h3 className="text-4xl font-serif text-white mb-4">Contracting</h3>
                 <p className="text-white/70 mb-8 max-w-sm transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 font-light leading-relaxed">
-                  Hyperscale data centers built to global Tier IV standards, providing the sovereign computing power needed for Africa's AI and cloud revolution. Local data, global performance.
+                  General contracting services and end-to-end system deployment. From site preparation to commissioning, we manage the full project lifecycle with precision and accountability.
                 </p>
                 <div className="w-full h-[1px] bg-white/20 mb-6 group-hover:bg-primary/50 transition-colors"></div>
                 <div className="flex items-center text-white/50 group-hover:text-primary font-bold uppercase tracking-[0.2em] text-xs transition-colors">
-                  <span>Explore Assets</span>
+                  <span>Learn More</span>
                   <ChevronRight className="w-4 h-4 ml-2" />
                 </div>
               </div>
             </motion.div>
 
-            {/* Connectivity */}
+            {/* Procurement & Trade */}
             <motion.div 
               initial="hidden"
               whileInView="visible"
@@ -311,22 +311,22 @@ export default function Home() {
               className="group relative h-[700px] overflow-hidden bg-background mt-0 lg:mt-32"
             >
               <div className="absolute inset-0">
-                <ParallaxImage src="/images/connectivity.png" alt="Connectivity Infrastructure" />
+                <ParallaxImage src="/images/energy.png" alt="Procurement and Trade" />
               </div>
               <div className="absolute inset-0 bg-background/50 group-hover:bg-background/30 transition-colors duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
               
               <div className="absolute inset-0 p-8 md:p-12 flex flex-col justify-end">
                 <div className="w-16 h-16 rounded-sm bg-white/5 backdrop-blur-md border border-white/10 flex items-center justify-center mb-8 text-secondary">
-                  <Signal className="w-8 h-8" />
+                  <Globe className="w-8 h-8" />
                 </div>
-                <h3 className="text-4xl font-serif text-white mb-4">Connect</h3>
+                <h3 className="text-4xl font-serif text-white mb-4">Procurement</h3>
                 <p className="text-white/70 mb-8 max-w-sm transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 font-light leading-relaxed">
-                  Terrestrial and submarine fiber-optic networks creating the high-bandwidth arteries that link the continent internally and globally. Erasing latency boundaries.
+                  Procurement and supply of IT and telecommunications equipment, supported by import and export operations. We source the right equipment and move it efficiently across borders.
                 </p>
                 <div className="w-full h-[1px] bg-white/20 mb-6 group-hover:bg-secondary/50 transition-colors"></div>
                 <div className="flex items-center text-white/50 group-hover:text-secondary font-bold uppercase tracking-[0.2em] text-xs transition-colors">
-                  <span>Explore Assets</span>
+                  <span>Learn More</span>
                   <ChevronRight className="w-4 h-4 ml-2" />
                 </div>
               </div>
@@ -524,7 +524,7 @@ export default function Home() {
                 INFRASCALE <span className="text-primary">AFRICA</span>
               </div>
               <p className="text-white/40 max-w-sm leading-relaxed font-light mb-8">
-                Scaling digital, energy, and connectivity infrastructure across the world's fastest-growing continent.
+                Construction, installation, and maintenance of telecommunications and IT infrastructure — serving enterprises, governments, and telecoms across Africa.
               </p>
               <div className="flex gap-4">
                 {/* Social placeholders */}
@@ -544,12 +544,12 @@ export default function Home() {
             </div>
 
             <div>
-              <h4 className="text-white font-bold uppercase tracking-[0.2em] text-xs mb-6">Divisions</h4>
+              <h4 className="text-white font-bold uppercase tracking-[0.2em] text-xs mb-6">Services</h4>
               <ul className="space-y-4 text-white/50 text-sm">
-                <li><a href="#" className="hover:text-primary transition-colors">Infrascale Energy</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Infrascale Digital</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Infrascale Connect</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Capital Partners</a></li>
+                <li><a href="#divisions" className="hover:text-primary transition-colors">Telecom & IT Infrastructure</a></li>
+                <li><a href="#divisions" className="hover:text-primary transition-colors">General Contracting</a></li>
+                <li><a href="#divisions" className="hover:text-primary transition-colors">System Deployment</a></li>
+                <li><a href="#divisions" className="hover:text-primary transition-colors">Procurement & Trade</a></li>
               </ul>
             </div>
           </div>

@@ -1,0 +1,26 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "O59F4PxkT4SG7OotdRSYm"
+uri = "file://artifacts/infrascale-africa/public/images/hero.png"
+type = "image"
+title = "Dawn over construction site in Lagos"
+
+[[generated]]
+id = "WQIe5SfvcP0XQrmmE2TXs"
+uri = "file://artifacts/infrascale-africa/public/images/energy.png"
+type = "image"
+title = "Solar energy array in African savanna"
+
+[[generated]]
+id = "bxG1xyY22dWy8ttKqBWM-"
+uri = "file://artifacts/infrascale-africa/public/images/digital.png"
+type = "image"
+title = "Inside a massive African data center"
+
+[[generated]]
+id = "FGrFLnX_lr_D4EeBVrxXo"
+uri = "file://artifacts/infrascale-africa/public/images/connectivity.png"
+type = "image"
+title = "Glowing fiber optic cables in Africa"

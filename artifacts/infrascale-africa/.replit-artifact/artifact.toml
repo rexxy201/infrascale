@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Infrascale Africa"
+version = "1.0.0"
+id = "artifacts/infrascale-africa"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19692
+
+[services.development]
+run = "pnpm --filter @workspace/infrascale-africa run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/infrascale-africa", "run", "build" ]
+publicDir = "artifacts/infrascale-africa/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19692"
+BASE_PATH = "/"

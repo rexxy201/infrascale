@@ -31,7 +31,11 @@ function ParallaxImage({ src, alt, speed = 0.5 }: { src: string, alt: string, sp
     <div ref={ref} className="w-full h-full overflow-hidden relative">
       <motion.img 
         src={src} 
-        alt={alt} 
+        alt={alt}
+        loading="lazy"
+        decoding="async"
+        width="800"
+        height="437"
         style={{ y, scale: 1.2 }}
         className="absolute inset-0 w-full h-full object-cover origin-center"
       />
@@ -132,8 +136,12 @@ export default function Home() {
           style={{ y: heroY, opacity: heroOpacity }}
         >
           <img 
-            src="/images/hero.png" 
-            alt="Dawn over construction site in Lagos" 
+            src="/images/hero.webp" 
+            alt="Dawn over construction site in Lagos"
+            width="1408"
+            height="768"
+            fetchPriority="high"
+            decoding="async"
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent mix-blend-multiply" />
@@ -251,7 +259,7 @@ export default function Home() {
               className="group relative h-[700px] overflow-hidden bg-background"
             >
               <div className="absolute inset-0">
-                <ParallaxImage src="/images/connectivity.png" alt="Telecommunications Infrastructure" />
+                <ParallaxImage src="/images/connectivity.webp" alt="Telecommunications Infrastructure" />
               </div>
               <div className="absolute inset-0 bg-background/50 group-hover:bg-background/30 transition-colors duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
@@ -281,7 +289,7 @@ export default function Home() {
               className="group relative h-[700px] overflow-hidden bg-background mt-0 lg:mt-16"
             >
               <div className="absolute inset-0">
-                <ParallaxImage src="/images/digital.png" alt="Contracting and System Deployment" />
+                <ParallaxImage src="/images/digital.webp" alt="Contracting and System Deployment" />
               </div>
               <div className="absolute inset-0 bg-background/50 group-hover:bg-background/30 transition-colors duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
@@ -311,7 +319,7 @@ export default function Home() {
               className="group relative h-[700px] overflow-hidden bg-background mt-0 lg:mt-32"
             >
               <div className="absolute inset-0">
-                <ParallaxImage src="/images/energy.png" alt="Procurement and Trade" />
+                <ParallaxImage src="/images/energy.webp" alt="Procurement and Trade" />
               </div>
               <div className="absolute inset-0 bg-background/50 group-hover:bg-background/30 transition-colors duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
@@ -402,7 +410,7 @@ export default function Home() {
               className="aspect-square relative"
             >
               <div className="absolute inset-0 bg-primary/20 translate-x-4 translate-y-4"></div>
-              <img src="/images/connectivity.png" alt="Telecom infrastructure installation" className="relative z-10 w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+              <img src="/images/connectivity-md.webp" alt="Telecom infrastructure installation" loading="lazy" decoding="async" width="800" height="800" className="relative z-10 w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
               <div className="absolute bottom-8 left-8 z-20 bg-background/90 backdrop-blur p-6 border border-white/10 max-w-xs">
                 <div className="text-accent text-xs font-bold tracking-[0.2em] uppercase mb-2">End-to-End Capability</div>
                 <div className="text-white font-serif text-xl">From Survey to Handover</div>
@@ -477,7 +485,7 @@ export default function Home() {
       {/* 7. Manifesto / CTA */}
       <section id="contact" className="py-32 md:py-48 bg-background relative">
         <div className="absolute inset-0">
-          <img src="/images/hero.png" alt="Background" className="w-full h-full object-cover opacity-10" />
+          <img src="/images/hero-md.webp" alt="" loading="lazy" decoding="async" width="800" height="437" className="w-full h-full object-cover opacity-10" />
           <div className="absolute inset-0 bg-background/90" />
         </div>
         

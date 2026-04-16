@@ -32,7 +32,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          access_key: "YOUR_WEB3FORMS_ACCESS_KEY",
+          access_key: "a344f951-eaa0-4df1-9425-689e20c3b6b6",
           to: "info@infrascale.africa",
           subject: `New Enquiry: ${form.subject} — from ${form.name}`,
           name: form.name,

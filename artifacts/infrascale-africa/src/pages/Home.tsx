@@ -70,10 +70,10 @@ export default function Home() {
 
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-5 lg:px-12 flex items-center justify-between bg-background/10 backdrop-blur-md border-b border-white/5">
-        <div className="text-lg lg:text-xl font-serif font-bold tracking-widest uppercase text-white flex items-center gap-2 shrink-0">
+        <a href="#" className="text-lg lg:text-xl font-serif font-bold tracking-widest uppercase text-white flex items-center gap-2 shrink-0 hover:opacity-80 transition-opacity">
           <div className="w-4 h-4 bg-primary rounded-sm"></div>
           INFRASCALE <span className="text-white/50">AFRICA</span>
-        </div>
+        </a>
 
         {/* Desktop Nav — lg and above */}
         <div className="hidden lg:flex items-center gap-8 text-xs font-medium tracking-[0.2em] uppercase text-white/70">

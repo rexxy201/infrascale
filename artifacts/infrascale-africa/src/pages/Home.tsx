@@ -496,17 +496,26 @@ export default function Home() {
               <motion.h2 variants={fadeUp} className="text-5xl md:text-7xl font-serif text-white leading-tight mb-8">
                 The future is built on <span className="text-primary italic">hard assets</span>.
               </motion.h2>
-              <motion.p variants={fadeUp} className="text-xl text-white/60 mb-16 font-light leading-relaxed">
-                Whether you are a sovereign entity looking to upgrade national infrastructure, or an enterprise scaling operations across the continent, we have the capital, expertise, and operational muscle to execute.
+              <motion.p variants={fadeUp} className="text-xl text-white/60 mb-6 font-light leading-relaxed">
+                Whether you are a government agency, enterprise, or institution looking to build or upgrade critical infrastructure — or a professional, contractor, or organisation seeking to partner with us — we want to hear from you.
               </motion.p>
+              <motion.div variants={fadeUp} className="flex flex-wrap justify-center gap-6 mb-6 text-white/40 text-xs font-bold uppercase tracking-[0.2em]">
+                <span>Project Enquiries</span>
+                <span className="text-white/20">|</span>
+                <span>Partnerships &amp; Collaborations</span>
+                <span className="text-white/20">|</span>
+                <span>Career Opportunities</span>
+                <span className="text-white/20">|</span>
+                <span>Subcontractor Registration</span>
+              </motion.div>
               
-              <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-6 justify-center">
+              <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-6 justify-center mt-10">
                 <button
                   onClick={() => setContactOpen(true)}
                   className="px-10 py-5 bg-white text-background font-bold uppercase tracking-[0.2em] text-sm hover:bg-primary hover:text-white transition-colors duration-300 flex items-center justify-center"
                 >
                   <Mail className="w-5 h-5 mr-3" />
-                  Initiate Dialogue
+                  Get In Touch
                 </button>
                 <a
                   href="#offices"
@@ -527,7 +536,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
             <div className="col-span-1 md:col-span-2">
               <div className="text-2xl font-serif font-bold tracking-widest uppercase text-white mb-6">
-                INFRASCALE <span className="text-primary">AFRICA</span>
+                INFRASCALE <span className="text-primary">AFRICA</span> <span className="text-white/30 text-lg">LIMITED</span>
               </div>
               <p className="text-white/40 max-w-sm leading-relaxed font-light mb-8">
                 Construction, installation, deployment, and maintenance of telecommunications systems, IT networks, data centres, and related facilities — serving enterprises, institutions, and government agencies across Africa.
@@ -561,7 +570,7 @@ export default function Home() {
           </div>
 
           <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-white/30 text-xs tracking-wider uppercase">
-            <p>&copy; {new Date().getFullYear()} Infrascale Africa Holdings. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Infrascale Africa Limited. All rights reserved.</p>
             <div className="flex gap-8 mt-4 md:mt-0">
               <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-white transition-colors">Terms of Service</a>

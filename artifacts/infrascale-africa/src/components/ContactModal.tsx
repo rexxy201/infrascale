@@ -183,13 +183,25 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                         style={{ colorScheme: "dark" }}
                       >
                         <option value="" disabled>Select a topic</option>
-                        <option value="Partnership">Partnership Opportunity</option>
-                        <option value="Energy Infrastructure">Energy Infrastructure</option>
-                        <option value="Digital / Data Centre">Digital / Data Centre</option>
-                        <option value="Connectivity">Connectivity</option>
-                        <option value="Investment">Investment Enquiry</option>
-                        <option value="Government / Sovereign">Government / Sovereign</option>
-                        <option value="General">General Enquiry</option>
+                        <optgroup label="Projects & Business">
+                          <option value="Infrastructure Project">Infrastructure Project Enquiry</option>
+                          <option value="Systems Integration">Systems Integration / IT Networks</option>
+                          <option value="Data Centre">Data Centre Construction</option>
+                          <option value="General Contracting">General Contracting (Civil / Electrical / Mechanical)</option>
+                          <option value="Managed Services">Managed Infrastructure Services</option>
+                          <option value="Procurement Supply">Procurement &amp; Equipment Supply</option>
+                          <option value="Consultancy Advisory">Consultancy &amp; Advisory</option>
+                          <option value="Government Institutional">Government / Institutional Project</option>
+                        </optgroup>
+                        <optgroup label="Careers &amp; Collaboration">
+                          <option value="Career Opportunity">Career Opportunity</option>
+                          <option value="Partnership Collaboration">Partnership / Collaboration</option>
+                          <option value="Subcontractor Supplier">Subcontractor / Supplier Registration</option>
+                          <option value="Investment">Investment Enquiry</option>
+                        </optgroup>
+                        <optgroup label="Other">
+                          <option value="General">General Enquiry</option>
+                        </optgroup>
                       </select>
                     </div>
                   </div>

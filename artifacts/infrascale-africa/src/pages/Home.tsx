@@ -350,7 +350,7 @@ export default function Home() {
               The footprint of our ambition across the continent.
             </motion.h2>
             <motion.div variants={fadeUp} className="text-white/50 max-w-sm font-light">
-              We operate at a scale that shifts economic metrics. These are not projections; these are hard assets in operation today.
+              From Lagos to Nairobi, Johannesburg to London — we are positioned where Africa's infrastructure demand is greatest, and where it is growing fastest.
             </motion.div>
           </motion.div>
 
@@ -363,34 +363,34 @@ export default function Home() {
           >
             <motion.div variants={fadeUp} className="border-t border-white/10 pt-8 relative group">
               <div className="absolute top-0 left-0 w-0 h-[1px] bg-primary group-hover:w-full transition-all duration-700"></div>
-              <div className="text-6xl md:text-8xl font-serif text-white mb-4 tracking-tighter">12</div>
-              <div className="text-xs font-bold uppercase tracking-[0.2em] text-white/50">Countries Active</div>
+              <div className="text-6xl md:text-8xl font-serif text-white mb-4 tracking-tighter">4</div>
+              <div className="text-xs font-bold uppercase tracking-[0.2em] text-white/50">Office Locations</div>
             </motion.div>
             <motion.div variants={fadeUp} className="border-t border-white/10 pt-8 relative group">
               <div className="absolute top-0 left-0 w-0 h-[1px] bg-accent group-hover:w-full transition-all duration-700"></div>
-              <div className="text-6xl md:text-8xl font-serif text-white mb-4 tracking-tighter flex items-baseline">1.5<span className="text-2xl text-accent ml-2">GW</span></div>
-              <div className="text-xs font-bold uppercase tracking-[0.2em] text-white/50">Power Generated</div>
+              <div className="text-6xl md:text-8xl font-serif text-white mb-4 tracking-tighter">3</div>
+              <div className="text-xs font-bold uppercase tracking-[0.2em] text-white/50">Client Sectors</div>
             </motion.div>
             <motion.div variants={fadeUp} className="border-t border-white/10 pt-8 relative group">
               <div className="absolute top-0 left-0 w-0 h-[1px] bg-primary group-hover:w-full transition-all duration-700"></div>
-              <div className="text-6xl md:text-8xl font-serif text-white mb-4 tracking-tighter flex items-baseline">80<span className="text-2xl text-primary ml-2">MW</span></div>
-              <div className="text-xs font-bold uppercase tracking-[0.2em] text-white/50">Data Center IT Load</div>
+              <div className="text-6xl md:text-8xl font-serif text-white mb-4 tracking-tighter">5</div>
+              <div className="text-xs font-bold uppercase tracking-[0.2em] text-white/50">Core Service Lines</div>
             </motion.div>
             <motion.div variants={fadeUp} className="border-t border-white/10 pt-8 relative group">
               <div className="absolute top-0 left-0 w-0 h-[1px] bg-secondary group-hover:w-full transition-all duration-700"></div>
-              <div className="text-6xl md:text-8xl font-serif text-white mb-4 tracking-tighter flex items-baseline">14<span className="text-2xl text-white/40 ml-2">k</span></div>
-              <div className="text-xs font-bold uppercase tracking-[0.2em] text-white/50">KM Fiber Laid</div>
+              <div className="text-6xl md:text-8xl font-serif text-white mb-4 tracking-tighter">Pan</div>
+              <div className="text-xs font-bold uppercase tracking-[0.2em] text-white/50">African Reach</div>
             </motion.div>
           </motion.div>
         </div>
       </section>
 
-      {/* 5. Highlight Project */}
+      {/* 5. How We Deliver */}
       <section id="projects" className="py-32 bg-background relative">
         <div className="container mx-auto px-6 md:px-12">
           <div className="flex items-center gap-4 mb-16">
             <div className="w-12 h-[2px] bg-accent"></div>
-            <h2 className="text-sm font-sans font-bold uppercase tracking-[0.2em] text-white">Signature Project</h2>
+            <h2 className="text-sm font-sans font-bold uppercase tracking-[0.2em] text-white">How We Deliver</h2>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -402,10 +402,10 @@ export default function Home() {
               className="aspect-square relative"
             >
               <div className="absolute inset-0 bg-primary/20 translate-x-4 translate-y-4"></div>
-              <img src="/images/digital.png" alt="Lagos Hyperscale Facility" className="relative z-10 w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+              <img src="/images/connectivity.png" alt="Telecom infrastructure installation" className="relative z-10 w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
               <div className="absolute bottom-8 left-8 z-20 bg-background/90 backdrop-blur p-6 border border-white/10 max-w-xs">
-                <div className="text-accent text-xs font-bold tracking-[0.2em] uppercase mb-2">Live Status</div>
-                <div className="text-white font-serif text-xl">Lagos Hyperscale Facility Phase 1</div>
+                <div className="text-accent text-xs font-bold tracking-[0.2em] uppercase mb-2">End-to-End Capability</div>
+                <div className="text-white font-serif text-xl">From Survey to Handover</div>
               </div>
             </motion.div>
 
@@ -416,18 +416,19 @@ export default function Home() {
               variants={staggerContainer}
             >
               <motion.h3 variants={fadeUp} className="text-4xl md:text-5xl font-serif text-white mb-8 leading-tight">
-                Anchoring West Africa's Digital Economy
+                One Partner. The Full Lifecycle.
               </motion.h3>
               <motion.p variants={fadeUp} className="text-xl text-white/60 mb-8 font-light leading-relaxed">
-                The 40MW Lagos facility is the most advanced data center ever constructed in West Africa. Powered by a dedicated captive solar array, it provides sovereign infrastructure for global hyperscalers entering the market.
+                Infrascale Africa owns the entire delivery chain — from site survey and design, through construction and installation, to commissioning, handover, and long-term maintenance. We bring the equipment, the expertise, and the accountability.
               </motion.p>
               
               <motion.ul variants={staggerContainer} className="space-y-6 mb-12">
                 {[
-                  "Tier IV Certified Design & Construction",
-                  "99.999% SLA Uptime Guarantee",
-                  "Direct connection to Equiano submarine cable",
-                  "100% renewable energy offset by 2026"
+                  "Site survey, design, and project planning",
+                  "Construction and physical installation of telecom and IT systems",
+                  "System commissioning, testing, and handover",
+                  "Ongoing maintenance and network support contracts",
+                  "Direct procurement and supply of equipment — local and international"
                 ].map((item, i) => (
                   <motion.li variants={fadeUp} key={i} className="flex items-start text-white/80">
                     <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center mr-4 shrink-0 mt-1">
@@ -438,8 +439,12 @@ export default function Home() {
                 ))}
               </motion.ul>
 
-              <motion.button variants={fadeUp} className="border-b border-primary text-white hover:text-primary transition-colors pb-1 uppercase tracking-[0.2em] text-sm font-bold flex items-center">
-                View Technical Specs <ArrowRight className="w-4 h-4 ml-2" />
+              <motion.button
+                variants={fadeUp}
+                onClick={() => setContactOpen(true)}
+                className="border-b border-primary text-white hover:text-primary transition-colors pb-1 uppercase tracking-[0.2em] text-sm font-bold flex items-center"
+              >
+                Discuss a Project <ArrowRight className="w-4 h-4 ml-2" />
               </motion.button>
             </motion.div>
           </div>

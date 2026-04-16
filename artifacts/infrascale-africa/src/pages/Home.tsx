@@ -158,7 +158,7 @@ export default function Home() {
             </motion.h1>
             
             <motion.p variants={fadeUp} className="text-xl md:text-2xl text-white/70 max-w-2xl mb-12 font-light leading-relaxed">
-              Construction, installation, and maintenance of telecommunications and IT infrastructure — delivered at continental scale across Africa.
+              Construction, installation, deployment, and maintenance of telecommunications systems, IT networks, data centres, and related facilities — serving enterprises, institutions, and governments across Africa.
             </motion.p>
             
             <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-6">
@@ -210,7 +210,7 @@ export default function Home() {
                   <HardHat className="w-5 h-5" />
                 </div>
                 <h3 className="text-xl font-serif text-white mb-4">Build & Maintain</h3>
-                <p className="text-white/60 leading-relaxed font-light">From the first survey to long-term maintenance contracts, we own the full lifecycle of telecommunications and IT network infrastructure across the continent.</p>
+                <p className="text-white/60 leading-relaxed font-light">From the first survey to long-term maintenance contracts, we own the full lifecycle of telecommunications systems, IT networks, data centres, and related facilities across the continent.</p>
               </motion.div>
               <motion.div variants={fadeUp} className="relative">
                 <div className="absolute -left-6 top-0 text-8xl font-serif text-white/5 pointer-events-none select-none -z-10 -translate-y-6">02</div>
@@ -218,7 +218,7 @@ export default function Home() {
                   <TrendingUp className="w-5 h-5" />
                 </div>
                 <h3 className="text-xl font-serif text-white mb-4">Deploy at Scale</h3>
-                <p className="text-white/60 leading-relaxed font-light">General contracting and end-to-end system deployment — we translate complex technical blueprints into operational infrastructure, on time and on spec.</p>
+                <p className="text-white/60 leading-relaxed font-light">General contracting across civil, electrical, mechanical, and ICT infrastructure — we translate complex technical blueprints into operational infrastructure, on time and on spec.</p>
               </motion.div>
               <motion.div variants={fadeUp} className="relative">
                 <div className="absolute -left-6 top-0 text-8xl font-serif text-white/5 pointer-events-none select-none -z-10 -translate-y-6">03</div>
@@ -262,7 +262,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-4xl font-serif text-white mb-4">Telecom & IT</h3>
                 <p className="text-white/70 mb-8 max-w-sm transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 font-light leading-relaxed">
-                  Construction, installation, and ongoing maintenance of telecommunications systems and information technology networks. We build the physical backbone that keeps Africa connected.
+                  Construction, installation, deployment, and maintenance of telecommunications systems, IT networks, data centres, and related facilities for enterprises, institutions, and government agencies.
                 </p>
                 <div className="w-full h-[1px] bg-white/20 mb-6 group-hover:bg-accent/50 transition-colors"></div>
                 <div className="flex items-center text-white/50 group-hover:text-accent font-bold uppercase tracking-[0.2em] text-xs transition-colors">
@@ -292,7 +292,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-4xl font-serif text-white mb-4">Contracting</h3>
                 <p className="text-white/70 mb-8 max-w-sm transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 font-light leading-relaxed">
-                  General contracting services and end-to-end system deployment. From site preparation to commissioning, we manage the full project lifecycle with precision and accountability.
+                  General contracting for civil, electrical, mechanical, and ICT infrastructure projects. From site preparation and deployment to commissioning, we manage the full project lifecycle.
                 </p>
                 <div className="w-full h-[1px] bg-white/20 mb-6 group-hover:bg-primary/50 transition-colors"></div>
                 <div className="flex items-center text-white/50 group-hover:text-primary font-bold uppercase tracking-[0.2em] text-xs transition-colors">
@@ -425,10 +425,10 @@ export default function Home() {
               <motion.ul variants={staggerContainer} className="space-y-6 mb-12">
                 {[
                   "Site survey, design, and project planning",
-                  "Construction and physical installation of telecom and IT systems",
-                  "System commissioning, testing, and handover",
-                  "Ongoing maintenance and network support contracts",
-                  "Direct procurement and supply of equipment — local and international"
+                  "Construction and installation of telecom systems, IT networks, data centres, and related facilities",
+                  "Civil, electrical, mechanical, and ICT works under general contract",
+                  "System deployment, commissioning, testing, and handover",
+                  "Ongoing maintenance contracts and long-term network support"
                 ].map((item, i) => (
                   <motion.li variants={fadeUp} key={i} className="flex items-start text-white/80">
                     <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center mr-4 shrink-0 mt-1">
@@ -460,7 +460,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-sm font-sans font-bold uppercase tracking-[0.2em] text-white/50 mb-4">Trusted By Sovereigns & Enterprise</h2>
+            <h2 className="text-sm font-sans font-bold uppercase tracking-[0.2em] text-white/50 mb-4">Serving Enterprises, Institutions & Government Agencies</h2>
           </motion.div>
 
           <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-40 grayscale">
@@ -529,7 +529,7 @@ export default function Home() {
                 INFRASCALE <span className="text-primary">AFRICA</span>
               </div>
               <p className="text-white/40 max-w-sm leading-relaxed font-light mb-8">
-                Construction, installation, and maintenance of telecommunications and IT infrastructure — serving enterprises, governments, and telecoms across Africa.
+                Construction, installation, deployment, and maintenance of telecommunications systems, IT networks, data centres, and related facilities — serving enterprises, institutions, and government agencies across Africa.
               </p>
               <div className="flex gap-4">
                 {/* Social placeholders */}

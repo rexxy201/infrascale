@@ -1,6 +1,6 @@
-import React, { useRef } from "react";
-import { motion, useScroll, useTransform, useSpring, useInView } from "framer-motion";
-import { ArrowRight, ChevronRight, Globe, Zap, Cpu, MapPin, Building, Signal, Mail, Shield, HardHat, TrendingUp } from "lucide-react";
+import React, { useRef, useState } from "react";
+import { motion, useScroll, useTransform, useSpring, AnimatePresence } from "framer-motion";
+import { ArrowRight, ChevronRight, Globe, Zap, Cpu, MapPin, Building, Signal, Mail, Shield, HardHat, TrendingUp, Menu, X } from "lucide-react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -38,7 +38,16 @@ function ParallaxImage({ src, alt, speed = 0.5 }: { src: string, alt: string, sp
   );
 }
 
+const navLinks = [
+  { href: "#thesis", label: "The Thesis" },
+  { href: "#divisions", label: "Divisions" },
+  { href: "#scale", label: "Scale" },
+  { href: "#projects", label: "Projects" },
+];
+
 export default function Home() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -58,19 +67,62 @@ export default function Home() {
       />
 
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-6 md:px-12 flex items-center justify-between mix-blend-difference bg-background/5 backdrop-blur-sm border-b border-white/5">
-        <div className="text-xl font-serif font-bold tracking-widest uppercase text-white flex items-center gap-2">
+      <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-5 lg:px-12 flex items-center justify-between bg-background/10 backdrop-blur-md border-b border-white/5">
+        <div className="text-lg lg:text-xl font-serif font-bold tracking-widest uppercase text-white flex items-center gap-2 shrink-0">
           <div className="w-4 h-4 bg-primary rounded-sm"></div>
           INFRASCALE <span className="text-white/50">AFRICA</span>
         </div>
-        <div className="hidden md:flex items-center gap-8 text-xs font-medium tracking-[0.2em] uppercase text-white/70">
-          <a href="#thesis" className="hover:text-primary transition-colors">The Thesis</a>
-          <a href="#divisions" className="hover:text-primary transition-colors">Divisions</a>
-          <a href="#scale" className="hover:text-primary transition-colors">Scale</a>
-          <a href="#projects" className="hover:text-primary transition-colors">Projects</a>
+
+        {/* Desktop Nav — lg and above */}
+        <div className="hidden lg:flex items-center gap-8 text-xs font-medium tracking-[0.2em] uppercase text-white/70">
+          {navLinks.map(link => (
+            <a key={link.href} href={link.href} className="hover:text-primary transition-colors">{link.label}</a>
+          ))}
           <a href="#contact" className="px-6 py-3 bg-white text-background hover:bg-primary hover:text-white transition-colors duration-300">Partner With Us</a>
         </div>
+
+        {/* Mobile / Tablet hamburger button */}
+        <button
+          className="lg:hidden text-white/80 hover:text-white transition-colors p-2"
+          onClick={() => setMobileMenuOpen(prev => !prev)}
+          aria-label="Toggle menu"
+        >
+          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </button>
       </nav>
+
+      {/* Mobile slide-down menu */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2 }}
+            className="fixed top-[65px] left-0 right-0 z-40 bg-background/95 backdrop-blur-md border-b border-white/10 lg:hidden"
+          >
+            <div className="flex flex-col px-6 py-6 gap-6">
+              {navLinks.map(link => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-white/80 hover:text-primary transition-colors uppercase tracking-[0.2em] text-sm font-medium"
+                >
+                  {link.label}
+                </a>
+              ))}
+              <a
+                href="#contact"
+                onClick={() => setMobileMenuOpen(false)}
+                className="px-6 py-4 bg-primary text-white font-bold uppercase tracking-[0.2em] text-sm text-center hover:bg-white hover:text-background transition-colors duration-300 mt-2"
+              >
+                Partner With Us
+              </a>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* 1. Hero Section */}
       <section className="relative h-[100svh] w-full flex items-center justify-center overflow-hidden bg-background">

@@ -1,5 +1,4 @@
 uploads = []
-outputs = []
 
 [[generated]]
 id = "O59F4PxkT4SG7OotdRSYm"
@@ -24,3 +23,9 @@ id = "FGrFLnX_lr_D4EeBVrxXo"
 uri = "file://artifacts/infrascale-africa/public/images/connectivity.png"
 type = "image"
 title = "Glowing fiber optic cables in Africa"
+
+[[outputs]]
+id = "XNHrIV4QvAAnDefc20sJB"
+uri = "file://infrascale-africa-cpanel.tar.gz"
+type = "unspecified"
+title = "Infrascale Africa — cPanel Upload Package"

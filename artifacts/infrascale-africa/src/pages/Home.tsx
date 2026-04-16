@@ -199,7 +199,7 @@ export default function Home() {
             className="max-w-5xl mx-auto text-center"
           >
             <motion.h2 variants={fadeUp} className="text-3xl md:text-5xl lg:text-6xl font-serif text-white leading-[1.1] mb-12">
-              We don't just connect networks. We build the <span className="text-primary italic">physical foundation</span> that Africa's digital economy runs on.
+              We don't just build networks. We design, integrate, manage, and <span className="text-primary italic">sustain</span> the infrastructure Africa runs on.
             </motion.h2>
             <motion.div variants={fadeUp} className="w-24 h-1 bg-accent mx-auto mb-20"></motion.div>
             
@@ -209,24 +209,24 @@ export default function Home() {
                 <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center mb-6 text-primary">
                   <HardHat className="w-5 h-5" />
                 </div>
-                <h3 className="text-xl font-serif text-white mb-4">Build & Maintain</h3>
-                <p className="text-white/60 leading-relaxed font-light">From the first survey to long-term maintenance contracts, we own the full lifecycle of telecommunications systems, IT networks, data centres, and related facilities across the continent.</p>
+                <h3 className="text-xl font-serif text-white mb-4">Build & Integrate</h3>
+                <p className="text-white/60 leading-relaxed font-light">Construction, installation, and maintenance of telecoms systems, IT networks, and data centres — combined with end-to-end systems integration, network deployment, and ongoing technical support.</p>
               </motion.div>
               <motion.div variants={fadeUp} className="relative">
                 <div className="absolute -left-6 top-0 text-8xl font-serif text-white/5 pointer-events-none select-none -z-10 -translate-y-6">02</div>
                 <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center mb-6 text-accent">
                   <TrendingUp className="w-5 h-5" />
                 </div>
-                <h3 className="text-xl font-serif text-white mb-4">Deploy at Scale</h3>
-                <p className="text-white/60 leading-relaxed font-light">General contracting across civil, electrical, mechanical, and ICT infrastructure — we translate complex technical blueprints into operational infrastructure, on time and on spec.</p>
+                <h3 className="text-xl font-serif text-white mb-4">Deliver & Manage</h3>
+                <p className="text-white/60 leading-relaxed font-light">Turnkey project delivery, managed infrastructure services, and outsourcing — we take full accountability from inception through commissioning and into long-term operations.</p>
               </motion.div>
               <motion.div variants={fadeUp} className="relative">
                 <div className="absolute -left-6 top-0 text-8xl font-serif text-white/5 pointer-events-none select-none -z-10 -translate-y-6">03</div>
                 <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center mb-6 text-secondary">
                   <Shield className="w-5 h-5" />
                 </div>
-                <h3 className="text-xl font-serif text-white mb-4">Supply & Trade</h3>
-                <p className="text-white/60 leading-relaxed font-light">Procurement and supply of IT and telecommunications equipment, backed by established import and export capabilities that keep projects moving without delays.</p>
+                <h3 className="text-xl font-serif text-white mb-4">Supply & Advise</h3>
+                <p className="text-white/60 leading-relaxed font-light">Procurement, supply, and distribution of IT and telecoms equipment — backed by consultancy and advisory services in technology, infrastructure development, and project management.</p>
               </motion.div>
             </motion.div>
           </motion.div>
@@ -260,9 +260,9 @@ export default function Home() {
                 <div className="w-16 h-16 rounded-sm bg-white/5 backdrop-blur-md border border-white/10 flex items-center justify-center mb-8 text-accent">
                   <Signal className="w-8 h-8" />
                 </div>
-                <h3 className="text-4xl font-serif text-white mb-4">Telecom & IT</h3>
+                <h3 className="text-4xl font-serif text-white mb-4">Infrastructure & Systems</h3>
                 <p className="text-white/70 mb-8 max-w-sm transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 font-light leading-relaxed">
-                  Construction, installation, deployment, and maintenance of telecommunications systems, IT networks, data centres, and related facilities for enterprises, institutions, and government agencies.
+                  Construction, installation, and maintenance of telecoms systems, IT networks, and data centres — plus end-to-end systems integration, network deployment, and technical support services.
                 </p>
                 <div className="w-full h-[1px] bg-white/20 mb-6 group-hover:bg-accent/50 transition-colors"></div>
                 <div className="flex items-center text-white/50 group-hover:text-accent font-bold uppercase tracking-[0.2em] text-xs transition-colors">
@@ -290,9 +290,9 @@ export default function Home() {
                 <div className="w-16 h-16 rounded-sm bg-white/5 backdrop-blur-md border border-white/10 flex items-center justify-center mb-8 text-primary">
                   <HardHat className="w-8 h-8" />
                 </div>
-                <h3 className="text-4xl font-serif text-white mb-4">Contracting</h3>
+                <h3 className="text-4xl font-serif text-white mb-4">Contracting & Managed Services</h3>
                 <p className="text-white/70 mb-8 max-w-sm transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 font-light leading-relaxed">
-                  General contracting for civil, electrical, mechanical, and ICT infrastructure projects. From site preparation and deployment to commissioning, we manage the full project lifecycle.
+                  General contracting for civil, electrical, mechanical, and ICT projects. Turnkey delivery, managed infrastructure services, and outsourcing — from inception to long-term operations.
                 </p>
                 <div className="w-full h-[1px] bg-white/20 mb-6 group-hover:bg-primary/50 transition-colors"></div>
                 <div className="flex items-center text-white/50 group-hover:text-primary font-bold uppercase tracking-[0.2em] text-xs transition-colors">
@@ -320,9 +320,9 @@ export default function Home() {
                 <div className="w-16 h-16 rounded-sm bg-white/5 backdrop-blur-md border border-white/10 flex items-center justify-center mb-8 text-secondary">
                   <Globe className="w-8 h-8" />
                 </div>
-                <h3 className="text-4xl font-serif text-white mb-4">Procurement</h3>
+                <h3 className="text-4xl font-serif text-white mb-4">Procurement & Advisory</h3>
                 <p className="text-white/70 mb-8 max-w-sm transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 font-light leading-relaxed">
-                  Procurement and supply of IT and telecommunications equipment, supported by import and export operations. We source the right equipment and move it efficiently across borders.
+                  Procurement, supply, distribution, and import/export of IT, telecoms, and electrical equipment — plus consultancy and advisory services in technology, infrastructure, and project management.
                 </p>
                 <div className="w-full h-[1px] bg-white/20 mb-6 group-hover:bg-secondary/50 transition-colors"></div>
                 <div className="flex items-center text-white/50 group-hover:text-secondary font-bold uppercase tracking-[0.2em] text-xs transition-colors">
@@ -416,19 +416,20 @@ export default function Home() {
               variants={staggerContainer}
             >
               <motion.h3 variants={fadeUp} className="text-4xl md:text-5xl font-serif text-white mb-8 leading-tight">
-                One Partner. The Full Lifecycle.
+                One Partner. Every Discipline.
               </motion.h3>
               <motion.p variants={fadeUp} className="text-xl text-white/60 mb-8 font-light leading-relaxed">
-                Infrascale Africa owns the entire delivery chain — from site survey and design, through construction and installation, to commissioning, handover, and long-term maintenance. We bring the equipment, the expertise, and the accountability.
+                Infrascale Africa covers the full scope — from construction and systems integration, through turnkey project delivery and managed operations, to procurement, supply, and strategic advisory. One accountable partner, end to end.
               </motion.p>
               
               <motion.ul variants={staggerContainer} className="space-y-6 mb-12">
                 {[
-                  "Site survey, design, and project planning",
-                  "Construction and installation of telecom systems, IT networks, data centres, and related facilities",
-                  "Civil, electrical, mechanical, and ICT works under general contract",
-                  "System deployment, commissioning, testing, and handover",
-                  "Ongoing maintenance contracts and long-term network support"
+                  "Construction, installation & maintenance — telecoms, IT networks, data centres, and facilities",
+                  "Systems design, integration, network deployment, and technical support",
+                  "General contracting — civil, electrical, mechanical, and ICT works",
+                  "Turnkey projects, managed infrastructure services, and outsourcing",
+                  "Procurement, supply, distribution, and import/export of IT and telecoms equipment",
+                  "Consultancy and advisory in technology, infrastructure development, and project management"
                 ].map((item, i) => (
                   <motion.li variants={fadeUp} key={i} className="flex items-start text-white/80">
                     <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center mr-4 shrink-0 mt-1">
@@ -551,10 +552,10 @@ export default function Home() {
             <div>
               <h4 className="text-white font-bold uppercase tracking-[0.2em] text-xs mb-6">Services</h4>
               <ul className="space-y-4 text-white/50 text-sm">
-                <li><a href="#divisions" className="hover:text-primary transition-colors">Telecom & IT Infrastructure</a></li>
-                <li><a href="#divisions" className="hover:text-primary transition-colors">General Contracting</a></li>
-                <li><a href="#divisions" className="hover:text-primary transition-colors">System Deployment</a></li>
-                <li><a href="#divisions" className="hover:text-primary transition-colors">Procurement & Trade</a></li>
+                <li><a href="#divisions" className="hover:text-primary transition-colors">Infrastructure & Systems Integration</a></li>
+                <li><a href="#divisions" className="hover:text-primary transition-colors">Contracting & Managed Services</a></li>
+                <li><a href="#divisions" className="hover:text-primary transition-colors">Turnkey Project Delivery</a></li>
+                <li><a href="#divisions" className="hover:text-primary transition-colors">Procurement, Supply & Advisory</a></li>
               </ul>
             </div>
           </div>

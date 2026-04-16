@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { motion, useScroll, useTransform, useSpring, AnimatePresence } from "framer-motion";
 import { ArrowRight, ChevronRight, Globe, Zap, Cpu, MapPin, Building, Signal, Mail, Shield, HardHat, TrendingUp, Menu, X } from "lucide-react";
+import ContactModal from "@/components/ContactModal";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -47,6 +48,7 @@ const navLinks = [
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [contactOpen, setContactOpen] = useState(false);
 
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -78,7 +80,7 @@ export default function Home() {
           {navLinks.map(link => (
             <a key={link.href} href={link.href} className="hover:text-primary transition-colors">{link.label}</a>
           ))}
-          <a href="#contact" className="px-6 py-3 bg-white text-background hover:bg-primary hover:text-white transition-colors duration-300">Partner With Us</a>
+          <button onClick={() => setContactOpen(true)} className="px-6 py-3 bg-white text-background hover:bg-primary hover:text-white transition-colors duration-300">Partner With Us</button>
         </div>
 
         {/* Mobile / Tablet hamburger button */}
@@ -112,13 +114,12 @@ export default function Home() {
                   {link.label}
                 </a>
               ))}
-              <a
-                href="#contact"
-                onClick={() => setMobileMenuOpen(false)}
+              <button
+                onClick={() => { setMobileMenuOpen(false); setContactOpen(true); }}
                 className="px-6 py-4 bg-primary text-white font-bold uppercase tracking-[0.2em] text-sm text-center hover:bg-white hover:text-background transition-colors duration-300 mt-2"
               >
                 Partner With Us
-              </a>
+              </button>
             </div>
           </motion.div>
         )}
@@ -494,13 +495,13 @@ export default function Home() {
               </motion.p>
               
               <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-6 justify-center">
-                <a
-                  href="mailto:info@infrascale.africa"
+                <button
+                  onClick={() => setContactOpen(true)}
                   className="px-10 py-5 bg-white text-background font-bold uppercase tracking-[0.2em] text-sm hover:bg-primary hover:text-white transition-colors duration-300 flex items-center justify-center"
                 >
                   <Mail className="w-5 h-5 mr-3" />
                   Initiate Dialogue
-                </a>
+                </button>
                 <a
                   href="#offices"
                   className="px-10 py-5 border border-white/20 text-white font-bold uppercase tracking-[0.2em] text-sm hover:bg-white/5 transition-colors duration-300 flex items-center justify-center"
@@ -562,6 +563,8 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      <ContactModal isOpen={contactOpen} onClose={() => setContactOpen(false)} />
     </div>
   );
 }

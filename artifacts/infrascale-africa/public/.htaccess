@@ -1,0 +1,126 @@
+# ============================================================
+# Infrascale Africa Limited — Apache / cPanel Security Config
+# ============================================================
+
+# ------------------------------------------------------
+# Force HTTPS (SSL redirect)
+# ------------------------------------------------------
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# Remove www (canonical to non-www)
+RewriteCond %{HTTP_HOST} ^www\.infrascale\.africa [NC]
+RewriteRule ^(.*)$ https://infrascale.africa/$1 [R=301,L]
+
+# ------------------------------------------------------
+# Security Headers
+# ------------------------------------------------------
+<IfModule mod_headers.c>
+
+  # Strict Transport Security (HSTS) — enforce HTTPS for 1 year
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+  # Prevent clickjacking
+  Header always set X-Frame-Options "SAMEORIGIN"
+
+  # Prevent MIME type sniffing
+  Header always set X-Content-Type-Options "nosniff"
+
+  # XSS protection (legacy browsers)
+  Header always set X-XSS-Protection "1; mode=block"
+
+  # Referrer policy
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+  # Permissions Policy — disable unused browser features
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=(), accelerometer=(), gyroscope=(), magnetometer=()"
+
+  # Content Security Policy
+  # Allows: self, Google Analytics, Google Tag Manager, Google Fonts, Web3Forms
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com; connect-src 'self' https://api.web3forms.com https://www.google-analytics.com https://region1.google-analytics.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self' https://api.web3forms.com;"
+
+  # Cross-Origin policies
+  Header always set Cross-Origin-Opener-Policy "same-origin-allow-popups"
+  Header always set Cross-Origin-Resource-Policy "cross-origin"
+
+  # Remove server signature (security through obscurity)
+  Header always unset X-Powered-By
+  Header always unset Server
+
+</IfModule>
+
+# ------------------------------------------------------
+# Disable directory listing
+# ------------------------------------------------------
+Options -Indexes
+
+# ------------------------------------------------------
+# Protect sensitive files
+# ------------------------------------------------------
+<FilesMatch "(^\.htaccess|\.htpasswd|\.env|\.git|composer\.lock|package\.json|package-lock\.json)$">
+  Order Allow,Deny
+  Deny from all
+</FilesMatch>
+
+# ------------------------------------------------------
+# Compression (Gzip) — improves page speed
+# ------------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript
+  AddOutputFilterByType DEFLATE application/javascript application/x-javascript application/json
+  AddOutputFilterByType DEFLATE application/xml application/xhtml+xml
+  AddOutputFilterByType DEFLATE image/svg+xml font/ttf font/otf font/woff font/woff2
+</IfModule>
+
+# ------------------------------------------------------
+# Browser Caching — improves load speed
+# ------------------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # HTML — short cache (content changes)
+  ExpiresByType text/html                    "access plus 1 hour"
+
+  # CSS and JavaScript — long cache (hashed filenames by Vite)
+  ExpiresByType text/css                     "access plus 1 year"
+  ExpiresByType application/javascript       "access plus 1 year"
+  ExpiresByType text/javascript              "access plus 1 year"
+
+  # Images
+  ExpiresByType image/jpeg                   "access plus 1 year"
+  ExpiresByType image/png                    "access plus 1 year"
+  ExpiresByType image/webp                   "access plus 1 year"
+  ExpiresByType image/svg+xml                "access plus 1 year"
+  ExpiresByType image/x-icon                 "access plus 1 year"
+
+  # Fonts
+  ExpiresByType font/ttf                     "access plus 1 year"
+  ExpiresByType font/otf                     "access plus 1 year"
+  ExpiresByType font/woff                    "access plus 1 year"
+  ExpiresByType font/woff2                   "access plus 1 year"
+
+  # Data
+  ExpiresByType application/json             "access plus 0 seconds"
+  ExpiresByType text/xml                     "access plus 0 seconds"
+</IfModule>
+
+# ------------------------------------------------------
+# React SPA — serve index.html for all routes
+# ------------------------------------------------------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>
+
+# ------------------------------------------------------
+# ETags — disable for security & accuracy
+# ------------------------------------------------------
+FileETag None
+<IfModule mod_headers.c>
+  Header unset ETag
+</IfModule>

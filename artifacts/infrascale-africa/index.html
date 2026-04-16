@@ -65,15 +65,38 @@
     <link rel="apple-touch-icon" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.svg" />
 
+    <!-- Security Meta Tags -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
     <!-- Performance: Preconnect & Preload -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://api.web3forms.com" />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
     <link rel="preload" href="/images/hero.png" as="image" fetchpriority="high" />
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Google Analytics GA4 — G-1BYMV56DRG -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1BYMV56DRG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-1BYMV56DRG', {
+        'anonymize_ip': true,
+        'cookie_flags': 'SameSite=None;Secure',
+        'send_page_view': true
+      });
+    </script>
 
     <!-- JSON-LD: Organization (Full) -->
     <script type="application/ld+json">

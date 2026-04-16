@@ -494,14 +494,20 @@ export default function Home() {
               </motion.p>
               
               <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-6 justify-center">
-                <button className="px-10 py-5 bg-white text-background font-bold uppercase tracking-[0.2em] text-sm hover:bg-primary hover:text-white transition-colors duration-300 flex items-center justify-center">
+                <a
+                  href="mailto:info@infrascale.africa"
+                  className="px-10 py-5 bg-white text-background font-bold uppercase tracking-[0.2em] text-sm hover:bg-primary hover:text-white transition-colors duration-300 flex items-center justify-center"
+                >
                   <Mail className="w-5 h-5 mr-3" />
                   Initiate Dialogue
-                </button>
-                <button className="px-10 py-5 border border-white/20 text-white font-bold uppercase tracking-[0.2em] text-sm hover:bg-white/5 transition-colors duration-300 flex items-center justify-center">
+                </a>
+                <a
+                  href="#offices"
+                  className="px-10 py-5 border border-white/20 text-white font-bold uppercase tracking-[0.2em] text-sm hover:bg-white/5 transition-colors duration-300 flex items-center justify-center"
+                >
                   <MapPin className="w-5 h-5 mr-3" />
                   View Office Locations
-                </button>
+                </a>
               </motion.div>
             </motion.div>
           </div>
@@ -526,7 +532,7 @@ export default function Home() {
               </div>
             </div>
             
-            <div>
+            <div id="offices">
               <h4 className="text-white font-bold uppercase tracking-[0.2em] text-xs mb-6">Offices</h4>
               <ul className="space-y-4 text-white/50 text-sm">
                 <li><span className="text-white block">Lagos (HQ)</span> Victoria Island, Nigeria</li>

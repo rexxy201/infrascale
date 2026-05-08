@@ -1,7 +1,8 @@
 import React, { useRef, useState } from "react";
 import { motion, useScroll, useTransform, useSpring, AnimatePresence } from "framer-motion";
-import { ArrowRight, ChevronRight, Globe, Zap, Cpu, MapPin, Building, Signal, Mail, Shield, HardHat, TrendingUp, Menu, X } from "lucide-react";
+import { ArrowRight, ChevronRight, Globe, Zap, Cpu, MapPin, Building, Signal, Mail, Shield, HardHat, TrendingUp } from "lucide-react";
 import ContactModal from "@/components/ContactModal";
+import Header from "@/components/Header";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -43,15 +44,7 @@ function ParallaxImage({ src, alt, speed = 0.5 }: { src: string, alt: string, sp
   );
 }
 
-const navLinks = [
-  { href: "#thesis", label: "The Thesis" },
-  { href: "#divisions", label: "Services" },
-  { href: "#scale", label: "Scale" },
-  { href: "#projects", label: "Projects" },
-];
-
 export default function Home() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
 
   const { scrollYProgress } = useScroll();
@@ -72,69 +65,8 @@ export default function Home() {
         style={{ scaleX }}
       />
 
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-5 lg:px-12 flex items-center justify-between bg-background/10 backdrop-blur-md border-b border-white/5">
-        <a href="#" className="flex items-center shrink-0 hover:opacity-80 transition-opacity" aria-label="Infrascale Africa Limited">
-          <img
-            src="/logo.png"
-            alt="Infrascale Africa Limited"
-            width="180"
-            height="42"
-            decoding="async"
-            fetchPriority="high"
-            className="h-8 lg:h-10 w-auto object-contain"
-          />
-        </a>
-
-        {/* Desktop Nav — lg and above */}
-        <div className="hidden lg:flex items-center gap-8 text-xs font-medium tracking-[0.2em] uppercase text-white/70">
-          {navLinks.map(link => (
-            <a key={link.href} href={link.href} className="hover:text-primary transition-colors">{link.label}</a>
-          ))}
-          <button onClick={() => setContactOpen(true)} className="px-6 py-3 bg-white text-background hover:bg-primary hover:text-white transition-colors duration-300">Partner With Us</button>
-        </div>
-
-        {/* Mobile / Tablet hamburger button */}
-        <button
-          className="lg:hidden text-white/80 hover:text-white transition-colors p-2"
-          onClick={() => setMobileMenuOpen(prev => !prev)}
-          aria-label="Toggle menu"
-        >
-          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
-      </nav>
-
-      {/* Mobile slide-down menu */}
-      <AnimatePresence>
-        {mobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.2 }}
-            className="fixed top-[65px] left-0 right-0 z-40 bg-background/95 backdrop-blur-md border-b border-white/10 lg:hidden"
-          >
-            <div className="flex flex-col px-6 py-6 gap-6">
-              {navLinks.map(link => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="text-white/80 hover:text-primary transition-colors uppercase tracking-[0.2em] text-sm font-medium"
-                >
-                  {link.label}
-                </a>
-              ))}
-              <button
-                onClick={() => { setMobileMenuOpen(false); setContactOpen(true); }}
-                className="px-6 py-4 bg-primary text-white font-bold uppercase tracking-[0.2em] text-sm text-center hover:bg-white hover:text-background transition-colors duration-300 mt-2"
-              >
-                Partner With Us
-              </button>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {/* Site Header — see src/components/Header.tsx to customize logo size & nav */}
+      <Header onContactClick={() => setContactOpen(true)} />
 
       {/* 1. Hero Section */}
       <section className="relative h-[100svh] w-full flex items-center justify-center overflow-hidden bg-background">

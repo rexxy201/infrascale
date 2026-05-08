@@ -74,9 +74,16 @@ export default function Home() {
 
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-5 lg:px-12 flex items-center justify-between bg-background/10 backdrop-blur-md border-b border-white/5">
-        <a href="#" className="text-lg lg:text-xl font-serif font-bold tracking-widest uppercase text-white flex items-center gap-2 shrink-0 hover:opacity-80 transition-opacity">
-          <div className="w-4 h-4 bg-primary rounded-sm"></div>
-          INFRASCALE <span className="text-white/50">AFRICA</span>
+        <a href="#" className="flex items-center shrink-0 hover:opacity-80 transition-opacity" aria-label="Infrascale Africa Limited">
+          <img
+            src="/logo.png"
+            alt="Infrascale Africa Limited"
+            width="180"
+            height="42"
+            decoding="async"
+            fetchPriority="high"
+            className="h-8 lg:h-10 w-auto object-contain"
+          />
         </a>
 
         {/* Desktop Nav — lg and above */}
@@ -543,8 +550,16 @@ export default function Home() {
         <div className="container mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
             <div className="col-span-1 md:col-span-2">
-              <div className="text-2xl font-serif font-bold tracking-widest uppercase text-white mb-6">
-                INFRASCALE <span className="text-primary">AFRICA</span> <span className="text-white/30 text-lg">LIMITED</span>
+              <div className="mb-6">
+                <img
+                  src="/logo.png"
+                  alt="Infrascale Africa Limited"
+                  width="240"
+                  height="56"
+                  loading="lazy"
+                  decoding="async"
+                  className="h-12 w-auto object-contain"
+                />
               </div>
               <p className="text-white/40 max-w-sm leading-relaxed font-light mb-8">
                 Construction, installation, deployment, and maintenance of telecommunications systems, IT networks, data centres, and related facilities — serving enterprises, institutions, and government agencies across Africa.

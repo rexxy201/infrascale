@@ -173,7 +173,7 @@
        1. HERO SECTION
        ============================================================ -->
   <section class="hero-section" id="hero">
-    <div class="hero-bg">
+    <div class="hero-bg" id="heroBg">
       <img src="images/hero.webp" alt="Dawn over construction site in Lagos" width="1408" height="768" fetchpriority="high" />
       <div class="hero-overlay"></div>
     </div>
@@ -199,6 +199,12 @@
           <i class="bi bi-arrow-right"></i>
         </a>
       </div>
+    </div>
+
+    <!-- Scroll Indicator (animated vertical line, bottom-left) -->
+    <div class="scroll-indicator" aria-hidden="true">
+      <div class="scroll-label">Scroll</div>
+      <div class="scroll-track"><div class="scroll-bar"></div></div>
     </div>
   </section>
 
@@ -257,7 +263,7 @@
         <!-- Card 1 -->
         <div class="col-lg-4" data-aos="fade-up">
           <div class="service-card">
-            <div class="service-bg"><img src="images/connectivity.webp" alt="Telecommunications Infrastructure" loading="lazy" width="800" height="437" /></div>
+            <div class="service-bg parallax-bg" data-speed="0.3"><img src="images/connectivity.webp" alt="Telecommunications Infrastructure" loading="lazy" width="800" height="437" /></div>
             <div class="service-overlay"></div>
             <div class="service-content">
               <div class="service-icon text-accent"><i class="bi bi-broadcast"></i></div>
@@ -272,7 +278,7 @@
         <!-- Card 2 -->
         <div class="col-lg-4" data-aos="fade-up" data-aos-delay="150">
           <div class="service-card service-card-mid">
-            <div class="service-bg"><img src="images/digital.webp" alt="Contracting and System Deployment" loading="lazy" width="800" height="437" /></div>
+            <div class="service-bg parallax-bg" data-speed="0.3"><img src="images/digital.webp" alt="Contracting and System Deployment" loading="lazy" width="800" height="437" /></div>
             <div class="service-overlay"></div>
             <div class="service-content">
               <div class="service-icon text-primary-custom"><i class="bi bi-building-gear"></i></div>
@@ -287,7 +293,7 @@
         <!-- Card 3 -->
         <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
           <div class="service-card service-card-low">
-            <div class="service-bg"><img src="images/energy.webp" alt="Procurement and Trade" loading="lazy" width="800" height="437" /></div>
+            <div class="service-bg parallax-bg" data-speed="0.3"><img src="images/energy.webp" alt="Procurement and Trade" loading="lazy" width="800" height="437" /></div>
             <div class="service-overlay"></div>
             <div class="service-content">
               <div class="service-icon text-secondary-custom"><i class="bi bi-globe2"></i></div>

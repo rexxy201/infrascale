@@ -60,17 +60,69 @@
       });
     });
 
-    // Header scroll shadow / shrink
+    // ============ SCROLL EFFECTS ============
+    // Header background shift, hero parallax, service card parallax,
+    // scroll indicator hide — all on a single throttled scroll listener
     var header = document.getElementById('siteHeader');
-    if (header) {
-      window.addEventListener('scroll', function () {
-        if (window.scrollY > 20) {
-          header.style.background = 'rgba(10, 14, 20, 0.92)';
-        } else {
-          header.style.background = 'rgba(10, 14, 20, 0.7)';
+    var heroBg = document.getElementById('heroBg');
+    var heroSection = document.querySelector('.hero-section');
+    var scrollIndicator = document.querySelector('.scroll-indicator');
+    var parallaxBgs = document.querySelectorAll('.parallax-bg');
+    var ticking = false;
+    var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function onScroll() {
+      var scrollY = window.pageYOffset;
+      var viewportH = window.innerHeight;
+
+      // 1. Header background shift
+      if (header) {
+        header.style.background = scrollY > 20 ? 'rgba(10, 14, 20, 0.92)' : 'rgba(10, 14, 20, 0.7)';
+      }
+
+      // Skip parallax on reduced-motion or small screens (perf)
+      if (prefersReducedMotion || window.innerWidth < 768) {
+        ticking = false; return;
+      }
+
+      // 2. Hero parallax — image moves up + fades out as you scroll
+      if (heroBg && heroSection) {
+        var heroH = heroSection.offsetHeight;
+        if (scrollY < heroH) {
+          var translate = scrollY * 0.4;
+          var opacity = Math.max(0, 1 - (scrollY / heroH));
+          heroBg.style.transform = 'translate3d(0,' + translate + 'px,0)';
+          heroBg.style.opacity = opacity;
         }
+      }
+
+      // 3. Hide scroll indicator once user has scrolled
+      if (scrollIndicator) {
+        if (scrollY > 100) scrollIndicator.classList.add('is-hidden');
+        else scrollIndicator.classList.remove('is-hidden');
+      }
+
+      // 4. Service card parallax — background image translates within card
+      parallaxBgs.forEach(function (el) {
+        var rect = el.getBoundingClientRect();
+        if (rect.bottom < 0 || rect.top > viewportH) return;
+        var speed = parseFloat(el.dataset.speed) || 0.3;
+        // Distance from viewport center
+        var fromCenter = (rect.top + rect.height / 2) - viewportH / 2;
+        var translate = -fromCenter * speed * 0.2;
+        var img = el.querySelector('img');
+        if (img) img.style.transform = 'translate3d(0,' + translate + 'px,0)';
       });
+
+      ticking = false;
     }
+
+    window.addEventListener('scroll', function () {
+      if (!ticking) { window.requestAnimationFrame(onScroll); ticking = true; }
+    }, { passive: true });
+
+    // Trigger once on load
+    onScroll();
 
     // ============ CONTACT FORM ============
     var form = document.getElementById('contactForm');

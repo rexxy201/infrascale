@@ -35,3 +35,9 @@ id = "ZJMsI8uXMLvpivjSXiSs9"
 uri = "file://infrascale-africa-deploy.tar.gz"
 type = "unspecified"
 title = "Infrascale Africa — Latest Deployment Package (1.1 MB)"
+
+[[outputs]]
+id = "P_x8f5uAJShjGUX3XB_hZ"
+uri = "file://infrascale-cpanel-static.tar.gz"
+type = "unspecified"
+title = "Infrascale Africa — Static HTML/Bootstrap Site for cPanel (901 KB)"
